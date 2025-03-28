@@ -32,7 +32,7 @@ async function getData(slug: string) {
     const data: fullProduct=await getData(params.slug);
     return(
          <div className="bg-white">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8 pt-40">
         <div className="grid gap-8 md:grid-cols-2">
           <ImageGallery images={data.images} />
 
