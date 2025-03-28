@@ -27,9 +27,9 @@ async function getData(slug: string) {
   export default async function ProductPge({
     params,
   }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
   }){
-    const data: fullProduct=await getData(params.slug);
+    const data: fullProduct=await getData((await params).slug);
     return(
          <div className="bg-white">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 pt-40">
