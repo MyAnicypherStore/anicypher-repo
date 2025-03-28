@@ -60,6 +60,9 @@ async function getData(slug: string) {
                     Online Store Coming Soon!
                 </Button>
             </div>
+            <p>
+              <strong>NOTE: The Watermark will not be a part of the final product</strong>
+            </p>
           </div>
         </div>
       </div>
