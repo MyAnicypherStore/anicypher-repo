@@ -4,7 +4,8 @@ import { client } from "../lib/sanity";
 import Image from "next/image";
 
 async function getData(cateogry: string) {
-  const query = `*[_type == "product" && category->name == "${cateogry}"] {
+  if(cateogry=='all'){
+    const query = `*[_type == "product"] {
         _id,
           "imageUrl": images[0].asset->url,
           price,
@@ -12,10 +13,21 @@ async function getData(cateogry: string) {
           "slug": slug.current,
           "categoryName": category->name
       }`;
-
-  const data = await client.fetch(query);
-
-  return data;
+      const data = await client.fetch(query);
+      return data;
+  }
+  else{
+    const query = `*[_type == "product" && category->name == "${cateogry}"] {
+      _id,
+        "imageUrl": images[0].asset->url,
+        price,
+        name,
+        "slug": slug.current,
+        "categoryName": category->name
+    }`;
+      const data = await client.fetch(query);
+      return data;
+  }
 }
 
 export const dynamic = "force-dynamic";
