@@ -38,9 +38,6 @@ async function getData(slug: string) {
 
           <div className="md:py-8">
             <div className="mb-2 md:mb-3">
-              <span className="mb-0.5 inline-block text-gray-500">
-                {data.categoryName}
-              </span>
               <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
                 {data.name}
               </h2>
@@ -54,15 +51,15 @@ async function getData(slug: string) {
 
             <p className="mt-12 text-base text-gray-500 tracking-wide">
               {data.description}
+            </p> 
+            <p className="pt-10 pb-10">
+              <strong>NOTE: The Watermark will not be a part of the final product</strong>
             </p>
             <div className="mt-5">
                 <Button className="disabled bg-muted-foreground cursor-not-allowed hover:bg-muted-foreground">
                     Online Store Coming Soon!
                 </Button>
             </div>
-            <p>
-              <strong>NOTE: The Watermark will not be a part of the final product</strong>
-            </p>
           </div>
         </div>
       </div>
