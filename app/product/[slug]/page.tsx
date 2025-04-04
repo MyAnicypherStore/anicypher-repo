@@ -16,6 +16,7 @@ async function getData(slug: string) {
              price_id
         }`;
     const data = await client.fetch(query);
+    console.log(data)
     return data;
   }
 
@@ -24,7 +25,7 @@ async function getData(slug: string) {
   //the params get destructured (becomes an object of type "slug" which is a string)
   //the slug comes from the "newest" file when a image is clicked, it passed the slug to here
 
-  export default async function ProductPge({
+  export default async function ProductPage({
     params,
   }: {
     params: Promise<{ slug: string }>;
@@ -51,7 +52,7 @@ async function getData(slug: string) {
 
             <p className="mt-12 text-base text-gray-500 tracking-wide">
               {data.description}
-            </p> 
+            </p>
             <p className="pt-10 pb-10">
               <strong>NOTE: The Watermark will not be a part of the final product</strong>
             </p>
