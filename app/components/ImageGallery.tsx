@@ -45,7 +45,7 @@ export default function ImageGallery({ images }: iAppProps) {
           alt="Photo"
           width={500}
           height={500}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-contain object-center"
         />
       </div>
     </div>

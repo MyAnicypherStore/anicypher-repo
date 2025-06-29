@@ -8,7 +8,8 @@ const links =[
     {name:"Home", href:"/"},
     {name:"Sticker", href:"/Sticker"},
     {name:"Pins", href:"/Pins"},
-    {name:"Prints", href:"/Prints"}
+    {name:"Prints", href:"/Prints"},
+    {name:"Misc.", href: "/Misc"}
 ];
 
 export default function Navbar(){
